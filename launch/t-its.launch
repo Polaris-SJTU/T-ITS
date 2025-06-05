@@ -1,0 +1,12 @@
+<launch>
+  <arg name="server" default="192.168.1.110"/>
+  <param name="server" type="string" value="$(arg server)"/>
+  <node pkg="T-ITS" type="motion_capture_system" name="motion_capture_system"/>
+
+  <param name="port" type="int" value="12345"/>
+  <param name="number_of_robots" type="int" value="4"/>
+  <param name="leader_id" type="string" value="[-1, 0, 0, 0]"/>
+  <param name="desired_pose" type="string" value="[[0, 0, 0], [0.4, 0, 0], [-0.35, -0.2, -1.5707], [-0.35, 0.2, 1.5707]]"/>
+  <node pkg="T-ITS" type="formation_controller.py" name="formation_controller" output="screen"/>
+  <node pkg="T-ITS" type="velocity_controller.py" name="velocity_controller" output="screen"/>
+</launch>

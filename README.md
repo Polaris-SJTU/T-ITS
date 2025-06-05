@@ -17,20 +17,13 @@ The experiments were conducted using **four robots** in a controlled laboratory 
 *Figure 1: Experimental setup and environment.*
 
 ### Experimental Video
-
 You can view the full experimental video demonstrating the robots’ operation and coordination during the cooperative transport task:
 
-<video width="500" controls>
-  <source src="https://github.com/user-attachments/assets/43492809-482d-4840-b3fc-7d7ed200ce60" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/d530a07f-8e8b-4f5f-8aef-bba78e6959e1
 
 *Video 1: Experimental video showing the robots performing formation control.*
 
-<video width="500" controls>
-  <source src="https://github.com/user-attachments/assets/43492809-482d-4840-b3fc-7d7ed200ce60" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/cfc730c9-8b9d-4f7a-9ef9-34e23ad95efd
 
 *Video 2: Experimental video showing the robots performing cooperative transportation.*
 

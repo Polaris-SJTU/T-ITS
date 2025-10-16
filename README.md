@@ -8,24 +8,32 @@ The proposed control system allows multiple Mecanum-wheeled robots to collaborat
 
 ## Experimental Setup
 
-The experiments were conducted using **four robots** in a controlled laboratory environment. A motion capture system was used to acquire precise relative position and orientation data of the robots for algorithm validation. The robots are equipped with onboard sensors for real-world deployment, and the system was validated under different operational conditions.
+The experiments were conducted using **three robots** in a controlled laboratory environment. The validation relies exclusively on onboard sensors to prove the system's practical feasibility.
 
-| ![Experimental Setup](./data/experimental_setup.jpg) | ![Experimental Setup](./data/experimental_field.jpg) |
-|:----------------------------------------------------:|:----------------------------------------------------:|
-| (a) Motion capture sytem and mecanum mobile robots.  |    (b) Experiment field (a simulated warehouse).     |
+| ![Experimental Setup](./data/payload_setup.png) | ![Experimental Setup](./data/onboard_sensor_setup.png) |
+|:-----------------------------------------------:|:------------------------------------------------------:|
+|               (a) Payload setup.                |               (b) Onboard sensor setup.                |
 
 *Figure 1: Experimental setup and environment.*
 
+The setup consists of:
+
+  * **Onboard Sensors**: Each robot is equipped with a **1080P fisheye camera** and a **SLAMTEC A1M8 LiDAR**.
+  * **Visual Tracking**: The leader robot is fitted with an **ArUco tag**, allowing for robust visual detection and pose estimation by the followers' cameras.
+  * **Sensor Fusion**: A **Kalman filter** is implemented on each follower to fuse the data from the camera (providing accurate orientation and lateral position) and the LiDAR (providing accurate distance), generating a stable and high-fidelity estimate of the leader's relative pose.
+  * **Payload**: A transparent rectangular frame is used as the payload to allow for a clear, unobstructed view of the robots' formation during transport maneuvers.
+
 ### Experimental Video
+
 You can view the full experimental video demonstrating the robots’ operation and coordination during the cooperative transport task:
 
-https://github.com/user-attachments/assets/d530a07f-8e8b-4f5f-8aef-bba78e6959e1
+https://github.com/user-attachments/assets/448016f7-7e90-4010-9c91-1b2565127c7e
 
-*Video 1: Experimental video showing the robots performing formation control.*
+*Video 1: Experimental video 1.*
 
-https://github.com/user-attachments/assets/cfc730c9-8b9d-4f7a-9ef9-34e23ad95efd
+https://github.com/user-attachments/assets/5c5b619d-2105-4a31-b25c-afc4c052fd0d
 
-*Video 2: Experimental video showing the robots performing cooperative transportation.*
+*Video 2: Experimental video 2.*
 
 ## Features
 * **Rhombic-Dodecahedral Velocity Constraints Modeling**: First geometric characterization of Mecanum-wheeled robots' velocity limits as a **rhombic dodecahedron**, enabling safe and precise motion planning in confined spaces.  
